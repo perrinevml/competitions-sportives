@@ -1,0 +1,258 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f8f9fa;
+    color: #212529;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: linear-gradient(90deg, #0074d9 50%, #2ecc40 100%);
+    color: #fff;
+    padding: 2rem 1rem 1rem 1rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+header p {
+    font-size: 1.15rem;
+    margin-top: 0.5rem;
+}
+
+nav {
+    background: #0064a6;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0 1.5rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 1rem 0;
+    display: block;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffdc00;
+}
+
+main {
+    max-width: 950px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+h2 {
+    color: #0074d9;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+/* Galerie / Carrousel */
+#galerie {
+    background: #eaf6ff;
+    padding: 2rem 1rem 1.5rem 1rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+#galerie h2 {
+    color: #0074d9;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 540px;
+    margin: 0 auto;
+}
+
+.carousel-images {
+    width: 320px;
+    height: 210px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.09);
+}
+
+.carousel-img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 320px;
+    height: 210px;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.4s;
+    z-index: 1;
+}
+
+.carousel-img.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+.carousel-btn {
+    background: #0074d9;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.carousel-btn:hover {
+    background: #2ecc40;
+}
+
+/* Tableau des événements */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 0.75rem 0.5rem;
+    border: 1px solid #dee2e6;
+    text-align: left;
+}
+
+th {
+    background: #2ecc40;
+    color: #fff;
+    font-size: 1rem;
+}
+
+tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+tr:hover td {
+    background: #eaf6ff;
+}
+
+a {
+    color: #0074d9;
+    text-decoration: underline;
+}
+
+form {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+
+form label {
+    display: block;
+    font-weight: 500;
+    margin: 1rem 0 0.25rem 0;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="date"],
+form input[type="time"] {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #b2bec3;
+    border-radius: 4px;
+    margin-bottom: 0.7rem;
+    font-size: 1rem;
+}
+
+form button {
+    background: #0074d9;
+    color: #fff;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #2ecc40;
+}
+
+footer {
+    background: #0064a6;
+    color: #fff;
+    text-align: center;
+    padding: 1.2rem 0;
+    margin-top: 2rem;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    main {
+        max-width: 100%;
+        padding: 0 0.5rem;
+    }
+    table, th, td {
+        font-size: 0.95rem;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav li {
+        margin: 0.5rem 0;
+    }
+    .carousel-images {
+        width: 200px;
+        height: 130px;
+    }
+    .carousel-img {
+        width: 200px;
+        height: 130px;
+    }
+}
+
+@media (max-width: 500px) {
+    #galerie {
+        padding: 1rem 0.3rem;
+        margin-bottom: 1rem;
+    }
+    .carousel {
+        max-width: 220px;
+    }
+}
